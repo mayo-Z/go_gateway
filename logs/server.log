@@ -1,0 +1,57 @@
+2022/05/17 22:31:35 ------------------------------------------------------------------------
+2022/05/17 22:31:35 [INFO]  config=./conf/prod/
+2022/05/17 22:31:35 [INFO]  start loading resources.
+2022/05/17 22:31:35 [INFO]  success loading resources.
+2022/05/17 22:31:35 ------------------------------------------------------------------------
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+start server
+ipConf map[127.0.0.1:7002:50]
+2022/05/17 22:31:35  [INFO] http_proxy_run::8081
+ipConf map[127.0.0.1:2003:51]
+watchConf
+2022/05/17 22:31:35  [INFO] https_proxy_run::4433
+ipConf map[127.0.0.1:50055:50]
+ipConf map[127.0.0.1:1003:50 127.0.0.1:1004:60]
+watchConf
+watchConf
+watchConf
+[127.0.0.1:50055]
+[127.0.0.1:2003]
+[127.0.0.1:7002]
+WeightRoundRobinBalance get conf: [127.0.0.1:7002,50]
+[127.0.0.1:7002]
+Update get conf: [127.0.0.1:2003,51]
+[127.0.0.1:2003]
+[127.0.0.1:1003 127.0.0.1:1004]
+WeightRoundRobinBalance get conf: [127.0.0.1:50055,50]
+2022/05/17 22:31:35  [INFO] tcp_proxy_run::8011
+[127.0.0.1:50055]
+Update get conf: [127.0.0.1:1003,50 127.0.0.1:1004,60]
+[127.0.0.1:1003 127.0.0.1:1004]
+2022/05/17 22:31:35  [INFO] grpc_proxy_run::8714
+2022/05/17 22:31:35  [INFO] grpc_proxy_run::8012
+2022/05/17 22:31:35  [INFO] grpc_proxy_run::8095
+UpdateConf []
+[]
+WeightRoundRobinBalance get conf: []
+[]
+UpdateConf []
+[]
+WeightRoundRobinBalance get conf: []
+[]
+UpdateConf []
+[]
+Update get conf: []
+[]
+UpdateConf []
+[]
+Update get conf: []
+[]
+2022/05/17 23:00:26  [INFO] tcp_proxy_stop :8011 stopped

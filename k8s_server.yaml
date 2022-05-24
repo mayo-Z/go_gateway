@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-gateway-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-gateway-server
+  template:
+    metadata:
+      labels:
+        app: go-gateway-server
+    spec:
+      containers:
+        - name: go-gateway-server
+          image: go-gateway-server:latest
+          ports:
+            - containerPort: 8081
+            - containerPort: 4433
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-gateway-server
+spec:
+  ports:
+    - port: 8081
+      name: "http"
+      targetPort: 8081
+      protocol: TCP
+      nodePort: 30080
+    - port: 4433
+      name: "https"
+      targetPort: 4433
+      protocol: TCP
+      nodePort: 30443
+  type: NodePort
+  selector:
+    name: go-gateway-server
