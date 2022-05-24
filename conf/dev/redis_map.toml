@@ -5,4 +5,4 @@
         max_active = 100
         max_idle = 100
         down_grade = false
-        password = "qyydhm"
+        password = "password"
