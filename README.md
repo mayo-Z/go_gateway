@@ -19,10 +19,10 @@
 # Go 微服务网关项目介绍
 
 这是一个由我个人搭建的微服务网关服务，大家可以下载、运行、测试、修改。
-技术栈：
-后端项目：todo
-前端项目：todo
-下游测试服务器：todo
+技术栈：go+vue2.0+element
+后端项目：https://github.com/uptocorrupt/go_gateway
+前端项目：https://github.com/uptocorrupt/go_gateway_view
+下游测试服务器：https://github.com/uptocorrupt/gateway_server
 
 项目的预览地址：(敬请期待)
 
