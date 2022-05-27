@@ -1,12 +1,15 @@
 目录
+
 - [Go 微服务网关项目介绍](#go-微服务网关项目介绍)
+- [项目预览](#项目预览)
+- [项目结构](#项目结构)
 - [实现功能](#实现功能)
   - [后台管理功能](#后台管理功能)
   - [反向代理功能](#反向代理功能)
 - [代码帮助](#代码帮助)
-  - [运行后端项目 todo](#运行后端项目-todo)
-  - [运行前端项目 todo](#运行前端项目-todo)
-  - [运行下游服务器 todo](#运行下游服务器-todo)
+  - [运行后端项目](#运行后端项目)
+  - [运行前端项目](#运行前端项目)
+  - [运行下游服务器](#运行下游服务器)
   - [代码部署](#代码部署)
     - [实体机部署](#实体机部署)
       - [1、每个项目独立部署](#1每个项目独立部署)
@@ -18,15 +21,31 @@
 
 # Go 微服务网关项目介绍
 
-这是一个由我个人搭建的微服务网关服务，大家可以下载、运行、测试、修改。
+这是一个由我个人搭建的前后端分离的微服务网关服务，大家可以下载、运行、测试、修改。
+
 技术栈：go+vue2.0+element
+
 后端项目：https://github.com/uptocorrupt/go_gateway
+
 前端项目：https://github.com/uptocorrupt/go_gateway_view
+
 下游测试服务器：https://github.com/uptocorrupt/gateway_server
 
 项目的预览地址：(敬请期待)
 
 联系邮箱：hhd5050@foxmail.com
+
+# 项目预览
+
+[![1.png](https://i.postimg.cc/7hr9y85j/1.png)](https://postimg.cc/5YpLwrqm)
+
+[![3.png](https://i.postimg.cc/7LXBvY7c/3.png)](https://postimg.cc/B8L5H3mc)
+
+[![2.png](https://i.postimg.cc/CM2QL1tp/2.png)](https://postimg.cc/CdjNcFSc)
+
+[![4.png](https://i.postimg.cc/G2H6qsNz/4.png)](https://postimg.cc/mzWdrhTF)
+# 项目结构
+todo
 
 # 实现功能
 
@@ -44,19 +63,22 @@
 
 分布式流量统计，http、tcp、grpc反向代理，负载均衡之主动探测，中间件实现，观察者模式，限流器
 
-
-
 # 代码帮助
 
 以下代码均在windows下运行，如在非windows环境下则会另行标注，其他环境请自行修改相关代码
 
-## 运行后端项目 todo
+本后端代码已集成前端代码，如仅需要后端代码，可删除dist文件夹，并修改后端文件: router/route.go
 
-- 首先git clone 本项目
+```
+// router.Static("/dist", "./dist")
+```
 
-`git clone git@github.com:e421083458/go_gateway.git`
+## 运行后端项目
 
-
+- 首先git clone 后端项目
+```
+git clone https://github.com/uptocorrupt/go_gateway.git
+```
 - 确保本地环境安装了Go 1.12+版本
 
 ```
@@ -96,12 +118,12 @@ go run main.go -config=./conf/dev/ -endpoint dashboard
 go run main.go -config=./conf/dev/ -endpoint server
 ```
 
-## 运行前端项目 todo
+## 运行前端项目
 
-- 首先git clone 本项目 todo 
+- 首先git clone 前端项目 
 
 ```
-git clone git@github.com:e421083458/go_gateway_view.git
+git clone https://github.com/uptocorrupt/go_gateway_view.git
 ```
 
 - 确保本地环境安装了nodejs
@@ -127,7 +149,31 @@ cnpm install
 ```
 npm run dev
 ```
-## 运行下游服务器 todo
+## 运行下游服务器 
+- git clone
+
+```
+git clone https://github.com/uptocorrupt/gateway_server.git
+```
+- 确保本地环境安装了Go 1.12+版本
+```
+go version
+```
+
+- 下载类库依赖
+
+```
+go env -w GO111MODULE=on 
+go env -w GOPROXY=https://goproxy.cn
+cd go_gateway
+go mod tidy
+```
+- 修改对应服务器的下游ip地址和端口
+- 运行
+
+```
+go run main.go
+```
 
 
 ## 代码部署
@@ -193,7 +239,7 @@ publicPath: '/dist'
 ### k8s部署(linux)
 
 - 创建docker文件 vim dockerfile-dashboard
-- 创建docker镜像：todo
+- 创建docker镜像：
 ```
 docker build -f dockerfile_dashboard -t dockerfile_dashboard .
 ```

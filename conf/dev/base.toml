@@ -29,8 +29,8 @@
 
 [cluster]
     cluster_ip="127.0.0.1"
-    cluster_port="8081"
-    cluster_ssl_port="4433"
+    cluster_port="8081" #k8s映射:8081->30081
+    cluster_ssl_port="4433" #k8s映射:4433->30443
 
 
 [swagger]
