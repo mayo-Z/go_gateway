@@ -3,9 +3,9 @@ package controller
 import (
 	"encoding/base64"
 	"errors"
-	"github.com/dgrijalva/jwt-go"
 	"github.com/e421083458/golang_common/lib"
 	"github.com/gin-gonic/gin"
+	"github.com/golang-jwt/jwt/v4"
 	"go_gateway/dao"
 	"go_gateway/dto"
 	"go_gateway/middleware"
