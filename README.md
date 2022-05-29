@@ -47,11 +47,12 @@
 [![4.png](https://i.postimg.cc/G2H6qsNz/4.png)](https://postimg.cc/mzWdrhTF)
 
 ## 数据库E-R图
-[![go-gateway.png](https://i.postimg.cc/FsYFCZkx/go-gateway.png)](https://postimg.cc/ppttpKZ9)
+
+[![go-gateway.png](https://i.postimg.cc/43fdyDwQ/go-gateway.png)](https://postimg.cc/k2H9hh02)
 
 ## 项目流程图
 
-[![image.png](https://i.postimg.cc/mDgF69sW/image.png)](https://postimg.cc/hJNjXfv2)
+[![image.png](https://i.postimg.cc/bJvsC7tw/image.png)](https://postimg.cc/QBR8Vnm2)
 
 
 # 实现功能
