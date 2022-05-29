@@ -1,8 +1,9 @@
 目录
 
 - [Go 微服务网关项目介绍](#go-微服务网关项目介绍)
-- [项目预览](#项目预览)
-- [项目结构](#项目结构)
+  - [预览图](#预览图)
+  - [数据库E-R图](#数据库e-r图)
+  - [项目流程图](#项目流程图)
 - [实现功能](#实现功能)
   - [后台管理功能](#后台管理功能)
   - [反向代理功能](#反向代理功能)
@@ -35,7 +36,7 @@
 
 联系邮箱：hhd5050@foxmail.com
 
-# 项目预览
+## 预览图
 
 [![1.png](https://i.postimg.cc/7hr9y85j/1.png)](https://postimg.cc/5YpLwrqm)
 
@@ -44,14 +45,20 @@
 [![2.png](https://i.postimg.cc/CM2QL1tp/2.png)](https://postimg.cc/CdjNcFSc)
 
 [![4.png](https://i.postimg.cc/G2H6qsNz/4.png)](https://postimg.cc/mzWdrhTF)
-# 项目结构
-todo
+
+## 数据库E-R图
+[![go-gateway.png](https://i.postimg.cc/FsYFCZkx/go-gateway.png)](https://postimg.cc/ppttpKZ9)
+
+## 项目流程图
+
+[![image.png](https://i.postimg.cc/mDgF69sW/image.png)](https://postimg.cc/hJNjXfv2)
+
 
 # 实现功能
 
 ##  后台管理功能
 
-管理员：注册、登录、退出、修改密码
+管理员：登录、退出、修改密码
 
 大盘：流量统计展示、全站服务类型占比、四维度指标
 
