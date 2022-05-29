@@ -52,8 +52,7 @@
 
 ## 项目流程图
 
-[![image.png](https://i.postimg.cc/bJvsC7tw/image.png)](https://postimg.cc/QBR8Vnm2)
-
+[![image.png](https://i.postimg.cc/X7D0SXzW/image.png)](https://postimg.cc/mtMn7Z4p)
 
 # 实现功能
 
