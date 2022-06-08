@@ -24,7 +24,11 @@
 
 这是一个前后端分离的微服务网关服务，大家可以下载、运行、测试、修改。
 
-技术栈：go+vue2.0+element
+项目架构上使用了微服务架构，中间件模块化开发，以及Restful风格的接口设计，使用swagger生成可视化的API接口页面。
+
+项目使用了中间件模块化开发，实现了翻译器、验证器、错误统一处理等功能。
+
+技术栈：Vue2.0+Element+Go+gRPC+JWT+MySQL+Redis
 
 后端项目：https://github.com/uptocorrupt/go_gateway
 
