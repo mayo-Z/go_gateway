@@ -4,10 +4,10 @@ import (
 	"context"
 	"github.com/e421083458/golang_common/lib"
 	"github.com/gin-gonic/gin"
-	"go_gateway/cert_file"
 	"go_gateway/middleware"
 	"log"
 	"net/http"
+	"os"
 	"time"
 )
 
@@ -56,8 +56,9 @@ func HttpsServerRun() {
 		MaxHeaderBytes: 1 << uint(lib.GetIntConf("proxy.https.max_header_bytes")),
 	}
 	log.Printf(" [INFO] https_proxy_run:%s\n", lib.GetStringConf("proxy.https.addr"))
-	if err := HttpsSrvHandler.ListenAndServeTLS(cert_file.Path("server.crt"),
-		cert_file.Path("server.key")); err != nil && err != http.ErrServerClosed {
+	t, _ := os.Getwd()
+	if err := HttpsSrvHandler.ListenAndServeTLS(t+"/cert_file/server.crt",
+		t+"/cert_file/server.key"); err != nil && err != http.ErrServerClosed {
 		log.Fatalf(" [ERROR] https_proxy_run:%s err:%v\n", lib.GetStringConf("proxy.https.addr"), err)
 	}
 

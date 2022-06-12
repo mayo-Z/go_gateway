@@ -15,6 +15,7 @@
     - [实体机部署](#实体机部署)
       - [1、每个项目独立部署](#1每个项目独立部署)
       - [2、前后端合并部署](#2前后端合并部署)
+    - [docker部署](#docker部署)
     - [k8s部署(linux)](#k8s部署linux)
 - [代码注意事项](#代码注意事项)
   - [不足与bug](#不足与bug)
@@ -36,7 +37,7 @@
 
 下游测试服务器：https://github.com/uptocorrupt/gateway_server
 
-项目的预览地址：(敬请期待)
+项目的预览地址：(即将上线)
 
 联系邮箱：hhd5050@foxmail.com
 
@@ -249,17 +250,27 @@ publicPath: '/dist'
 - 启动后端项目
 - 在浏览器中打开：http://127.0.0.1:8880/dist/
 
-### k8s部署(linux)
+### docker部署
 
 - 创建docker文件 vim dockerfile-dashboard
-- 创建docker镜像：
+- 创建docker镜像
+
+其中"-f"后接参数为自己编写的dockerfile文件，"-t"后接参数为生成的docker镜像名
+
 ```
-docker build -f dockerfile_dashboard -t dockerfile_dashboard .
+docker build -f dockerfile-dashboard -t dockerfile_dashboard .
+docker build -f dockerfile-server -t dockerfile_server .
 ```
-- 运行测试docker镜像: 
+- 运行测试docker镜像:
 ```
-docker run -it --rm --name go_gateteway_dashboard -p 8880:8880 go_gateteway_dashboard
+docker run -it --rm --name dockerfile_dashboard -p 8880:8880 dockerfile_dashboard
+docker run -it --rm --name dockerfile_server -p 8081:8081 -p 4433:4433 dockerfile_server
 ```
+
+### k8s部署(linux)
+
+- 创建docker镜像
+
 - 创建交叉编译脚本，解决build太慢问题 
 ```
 vim docker_build.sh

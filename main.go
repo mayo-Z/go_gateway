@@ -35,7 +35,7 @@ func main() {
 	if *endpoint == "dashboard" {
 		//如果configPath为空，则从命令行中`-config=./conf/prod/`中读取
 		//测试用 “go run main.go -config=./conf/dev/ -endpoint=dashboard”
-		// “go run main.go -config=./conf/prod/ -endpoint=dashboard”
+		// 生产环境用“go run main.go -config=./conf/prod/ -endpoint=dashboard”
 		lib.InitModule(*config, []string{"base", "mysql", "redis"})
 		defer lib.Destroy()
 		router.HttpServerRun()
@@ -46,7 +46,7 @@ func main() {
 		router.HttpServerStop()
 	} else {
 		//测试用 “go run main.go -config=./conf/dev/ -endpoint=server”
-		//测试用 “go run main.go -config=./conf/prod/ -endpoint=server”
+		//生产环境用 “go run main.go -config=./conf/prod/ -endpoint=server”
 		lib.InitModule(*config, []string{"base", "mysql", "redis"})
 		defer lib.Destroy()
 		dao.ServiceManagerHandler.LoadOnce()
