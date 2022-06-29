@@ -37,7 +37,7 @@
 
 下游测试服务器：https://github.com/uptocorrupt/gateway_server
 
-项目的预览地址：(即将上线)
+项目的预览地址：http://www.gogateway.cn/
 
 联系邮箱：hhd5050@foxmail.com
 
@@ -201,11 +201,11 @@ go run main.go
 - 前端设置:
 .env.production
 ```
-VUE_APP_BASE_API = ' '
+VUE_APP_BASE_API = 'prod-api '
 ```
 vue.config.js
 ```
-publicPath: '/dist'
+publicPath: '/'
 ```
 - 使用nginx将后端接口设置到跟前端同域下访问
 ```
@@ -224,6 +224,13 @@ publicPath: '/dist'
         }
     }
 ```
+
+- 前端打包
+
+```
+  npm run build:prod
+```
+
 - 代理服务器独立部署
 
 - 启动后端项目
