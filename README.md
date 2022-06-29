@@ -199,7 +199,7 @@ go run main.go
 - 前端项目一个端口
 - 接口项目一个端口
 - 前端设置:
-.production
+.env.production
 ```
 VUE_APP_BASE_API = ' '
 ```
@@ -239,7 +239,7 @@ publicPath: '/dist'
 router.Static("/dist", "./dist")
 ```
 - 前端设置:
-.production
+.env.production
 ```
 VUE_APP_BASE_API = ' '
 ```
