@@ -45,21 +45,21 @@
 
 ## 预览图
 
-[![1.png](https://imgse.com/i/xmVkgf)](https://imgse.com/i/xmVkgf)
+[![xmVkgf.png](https://s1.ax1x.com/2022/09/28/xmVkgf.png)](https://imgse.com/i/xmVkgf)
 
-[![3.png](https://imgse.com/i/xmVkgf)](https://imgse.com/i/xmVkgf)
+[![xmVGKU.png](https://s1.ax1x.com/2022/09/28/xmVGKU.png)](https://imgse.com/i/xmVGKU)
 
-[![2.png](https://i.postimg.cc/CM2QL1tp/2.png)](https://postimg.cc/CdjNcFSc)
+[![xmV08x.png](https://s1.ax1x.com/2022/09/28/xmV08x.png)](https://imgse.com/i/xmV08x)
 
-[![4.png](https://i.postimg.cc/G2H6qsNz/4.png)](https://postimg.cc/mzWdrhTF)
+[![xmV2ad.png](https://s1.ax1x.com/2022/09/28/xmV2ad.png)](https://imgse.com/i/xmV2ad)
 
 ## 数据库E-R图
 
-[![go-gateway.png](https://i.postimg.cc/43fdyDwQ/go-gateway.png)](https://postimg.cc/k2H9hh02)
+[![xmZpsU.png](https://s1.ax1x.com/2022/09/28/xmZpsU.png)](https://imgse.com/i/xmZpsU)
 
 ## 项目流程图
 
-[![image.png](https://i.postimg.cc/X7D0SXzW/image.png)](https://postimg.cc/mtMn7Z4p)
+[![xmZFo9.png](https://s1.ax1x.com/2022/09/28/xmZFo9.png)](https://imgse.com/i/xmZFo9)
 
 # 实现功能
 
