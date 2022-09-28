@@ -45,9 +45,9 @@
 
 ## 预览图
 
-[![1.png](https://i.postimg.cc/7hr9y85j/1.png)](https://postimg.cc/5YpLwrqm)
+[![1.png](https://imgse.com/i/xmVkgf)](https://imgse.com/i/xmVkgf)
 
-[![3.png](https://i.postimg.cc/7LXBvY7c/3.png)](https://postimg.cc/B8L5H3mc)
+[![3.png](https://imgse.com/i/xmVkgf)](https://imgse.com/i/xmVkgf)
 
 [![2.png](https://i.postimg.cc/CM2QL1tp/2.png)](https://postimg.cc/CdjNcFSc)
 
@@ -212,14 +212,9 @@ publicPath: '/'
 - 使用nginx将后端接口设置到跟前端同域下访问
 ```
     server {
-        listen       8882;
+        listen       80
         server_name  localhost;
         root C:\ gateway\go_gateway_view\dist;
-        index  index.html index.htm index.php;
-
-        location / {
-            try_files $uri $uri/ /index.html?$args;
-        }
 
         location /prod-api/ {
             proxy_pass http://127.0.0.1:8880/;
